@@ -1,0 +1,16 @@
+Tarefa,Tipo,Dado
+Abrir Iniciar do Windows,tecla,win
+Aguardar 1 segundo,espera,1
+Abrir navegador,texto,chrome
+Aguardar 1 segundo,espera,1
+Pressionar Enter,tecla,enter
+Aguardar 3 segundos,espera,3
+Pesquisar,texto,Automacao Robotica de Processos
+Pressionar Enter,tecla,enter
+Aguardar 3 segundos,espera,3
+Abrir nova aba,hotkey,ctrl+t
+Aguardar 3 segundos,espera,3
+Digitar outro site,texto,github.com/gustavor0d/robotic_process_automation
+Pressionar Enter,tecla,enter
+Aguardar 3 segundos,espera,3
+Abrir nova aba,hotkey,alt+tab
