@@ -1,4 +1,4 @@
-# Robotic Process Automation
+# Robotic Process Automation 
 
 Este projeto tem como objetivo automatizar tarefas repetitivas usando Python, baseando-se nos princípios de RPA (*Robotic Process Automation*). As ações a serem executadas são definidas em um arquivo CSV (`tarefas.csv`), onde cada linha descreve uma tarefa. O script lê esse arquivo e, **usando a biblioteca PyAutoGUI**, realiza as ações na ordem especificada. As tarefas suportadas incluem **digitação de texto**, **pressionamento de teclas**, **espera (delay)**, **combinações de teclas (hotkeys)** e **cliques** em coordenadas específicas da tela. Ao final da execução, o programa gera um **relatório em formato Excel** contendo o status (sucesso ou falha) de cada tarefa e o tempo gasto em sua execução.
 
