@@ -4,6 +4,9 @@ from openpyxl import Workbook
 from datetime import datetime
 import time
 import os
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 os.system("cls")
 
@@ -20,15 +23,33 @@ def executar_tarefa(tarefa, tipo, dado):
         elif tipo.lower() == 'hotkey':
             teclas = dado.split('+')
             pyautogui.hotkey(*teclas)
+        elif tipo.lower() == 'click':
+            if dado.startswith('(') and dado.endswith(')'):
+                cord = dado.strip("()")
+                partes = cord.split(',')
+                x,y = None, None
+                for parte in partes:
+                    chave, valor = parte.split("=")
+                    if chave.strip().lower() == 'x':
+                        x=int(valor.strip())
+                    elif chave.strip().lower() == 'y':
+                        y=int(valor.strip())
+                if x is not None and y is not None:
+                    pyautogui.click(x, y)
+                else:
+                    print("Eroo na cordenada")
+            else:
+                return (tarefa, "Formato de coordenadas inválido", 0)
+            
         else:
             return (tarefa, "Tipo de tarefa desconhecida", 0)
         
         tempo = round(time.time() - inicio, 2)
-
         return (tarefa, "Sucesso", tempo)
     
     except Exception as e:
         return (tarefa, f"Erro: {str(e)}", 0)
+
 
 def gerar_relatorio(relatorio):
     wb = Workbook()

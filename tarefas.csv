@@ -13,4 +13,12 @@ Aguardar 3 segundos,espera,3
 Digitar outro site,texto,github.com/gustavor0d/robotic_process_automation
 Pressionar Enter,tecla,enter
 Aguardar 3 segundos,espera,3
-Abrir nova aba,hotkey,alt+tab
+Abrir nova aba,hotkey,ctrl+t
+Aguardar 3 segundos,espera,3
+Pesquisar,texto,github 
+Aguardar 3 segundos,espera,1
+Pressionar Enter,tecla,enter
+Aguardar 3 segundos,espera,3
+ClicarGitHub,click,"(x=1201, y=342)"
+Aguardar 3 segundos,espera,3
+ClicarGitHub,click,"(x=1396, y=554)"
